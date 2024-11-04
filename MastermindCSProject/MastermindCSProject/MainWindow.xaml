@@ -9,11 +9,12 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="8*"/>
-            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="62*"/>
             <ColumnDefinition Width="51*"/>
         </Grid.ColumnDefinitions>
-        <ComboBox x:Name="color1ComboBox" HorizontalAlignment="Left" Margin="45,26,0,0" VerticalAlignment="Top" Width="158" Height="32" Grid.Column="1" Grid.ColumnSpan="2">
+        <ComboBox x:Name="color1ComboBox" Margin="22,26,0,0" VerticalAlignment="Top" Height="32" SelectionChanged="color1ComboBox_SelectionChanged" HorizontalAlignment="Left" Width="156" Grid.ColumnSpan="2">
             <ComboBoxItem Content="White"/>
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Blue"/>
@@ -21,7 +22,7 @@
             <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="Yellow"/>
         </ComboBox>
-        <ComboBox x:Name="color2ComboBox" HorizontalAlignment="Left" Margin="8,26,0,0" VerticalAlignment="Top" Width="157" Height="32" Grid.Column="2">
+        <ComboBox x:Name="color2ComboBox" Margin="10,26,0,0" VerticalAlignment="Top" Width="158" Height="32" Grid.Column="2" SelectionChanged="color2ComboBox_SelectionChanged" Grid.ColumnSpan="2" HorizontalAlignment="Left">
             <ComboBoxItem Content="White"/>
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Blue"/>
@@ -29,7 +30,7 @@
             <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="Yellow"/>
         </ComboBox>
-        <ComboBox x:Name="color3ComboBox" HorizontalAlignment="Left" Margin="165,26,0,0" VerticalAlignment="Top" Width="157" Height="32" Grid.Column="2" Grid.ColumnSpan="2">
+        <ComboBox x:Name="color3ComboBox" HorizontalAlignment="Left" Margin="177,26,0,0" VerticalAlignment="Top" Width="158" Height="32" Grid.Column="3" SelectionChanged="color3ComboBox_SelectionChanged" Grid.ColumnSpan="2">
             <ComboBoxItem Content="White"/>
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Blue"/>
@@ -37,7 +38,7 @@
             <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="Yellow"/>
         </ComboBox>
-        <ComboBox x:Name="color4ComboBox" HorizontalAlignment="Left" Margin="12,26,0,0" VerticalAlignment="Top" Width="158" Height="32" Grid.Column="3">
+        <ComboBox x:Name="color4ComboBox" HorizontalAlignment="Left" Margin="55,26,0,0" VerticalAlignment="Top" Width="158" Height="32" Grid.Column="4" SelectionChanged="color4ComboBox_SelectionChanged">
             <ComboBoxItem Content="White"/>
             <ComboBoxItem Content="Red"/>
             <ComboBoxItem Content="Blue"/>
@@ -45,7 +46,11 @@
             <ComboBoxItem Content="Orange"/>
             <ComboBoxItem Content="Yellow"/>
         </ComboBox>
-        <Button x:Name="checkCodeButton" Content="Check code" HorizontalAlignment="Left" Margin="8,289,0,0" VerticalAlignment="Top" Width="314" Height="40" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="checkCodeButton" Content="Check code" HorizontalAlignment="Left" Margin="8,289,0,0" VerticalAlignment="Top" Width="314" Height="40" Grid.Column="3" Grid.ColumnSpan="2"/>
+        <Label x:Name="color1Label" Content="" HorizontalAlignment="Left" Margin="22,73,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="156" Height="201"/>
+        <Label x:Name="color2Label" Grid.Column="2" Content="" HorizontalAlignment="Left" Margin="11,73,0,0" VerticalAlignment="Top" Height="201" Width="156" Grid.ColumnSpan="2"/>
+        <Label x:Name="color3Label" Grid.Column="3" Content="" HorizontalAlignment="Left" Margin="179,73,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="201" Width="156"/>
+        <Label x:Name="color4Label" Grid.Column="4" Content="" HorizontalAlignment="Left" Margin="57,73,0,0" VerticalAlignment="Top" Height="201" Width="156"/>
 
     </Grid>
 </Window>
