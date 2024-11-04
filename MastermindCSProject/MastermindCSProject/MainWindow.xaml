@@ -8,14 +8,44 @@
         Title="Mastermind" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="62*"/>
+            <ColumnDefinition Width="51*"/>
         </Grid.ColumnDefinitions>
-        <ComboBox x:Name="color1ComboBox" HorizontalAlignment="Left" Margin="45,26,0,0" VerticalAlignment="Top" Width="158" Height="32" Grid.Column="1"/>
-        <ComboBox x:Name="color2ComboBox" HorizontalAlignment="Left" Margin="203,26,0,0" VerticalAlignment="Top" Width="157" Height="32" Grid.Column="1"/>
-        <ComboBox x:Name="color3ComboBox" HorizontalAlignment="Left" Margin="360,26,0,0" VerticalAlignment="Top" Width="157" Height="32" Grid.Column="1"/>
-        <ComboBox x:Name="color4ComboBox" HorizontalAlignment="Left" Margin="517,26,0,0" VerticalAlignment="Top" Width="158" Height="32" Grid.Column="1"/>
-        <Button x:Name="checkCodeButton" Content="Check code" HorizontalAlignment="Left" Margin="203,289,0,0" VerticalAlignment="Top" Width="314" Height="40" Grid.Column="1"/>
+        <ComboBox x:Name="color1ComboBox" HorizontalAlignment="Left" Margin="45,26,0,0" VerticalAlignment="Top" Width="158" Height="32" Grid.Column="1" Grid.ColumnSpan="2">
+            <ComboBoxItem Content="White"/>
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Orange"/>
+            <ComboBoxItem Content="Yellow"/>
+        </ComboBox>
+        <ComboBox x:Name="color2ComboBox" HorizontalAlignment="Left" Margin="8,26,0,0" VerticalAlignment="Top" Width="157" Height="32" Grid.Column="2">
+            <ComboBoxItem Content="White"/>
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Orange"/>
+            <ComboBoxItem Content="Yellow"/>
+        </ComboBox>
+        <ComboBox x:Name="color3ComboBox" HorizontalAlignment="Left" Margin="165,26,0,0" VerticalAlignment="Top" Width="157" Height="32" Grid.Column="2" Grid.ColumnSpan="2">
+            <ComboBoxItem Content="White"/>
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Orange"/>
+            <ComboBoxItem Content="Yellow"/>
+        </ComboBox>
+        <ComboBox x:Name="color4ComboBox" HorizontalAlignment="Left" Margin="12,26,0,0" VerticalAlignment="Top" Width="158" Height="32" Grid.Column="3">
+            <ComboBoxItem Content="White"/>
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Blue"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Orange"/>
+            <ComboBoxItem Content="Yellow"/>
+        </ComboBox>
+        <Button x:Name="checkCodeButton" Content="Check code" HorizontalAlignment="Left" Margin="8,289,0,0" VerticalAlignment="Top" Width="314" Height="40" Grid.Column="2" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
