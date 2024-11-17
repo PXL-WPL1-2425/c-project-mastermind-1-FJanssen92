@@ -16,23 +16,27 @@ namespace MastermindCSProject
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        private string color1, color2, color3, color4;
+
         public MainWindow()
         {
             InitializeComponent();
 
-            Title = "Mastermind " + "(" + RandomColors() + ")";
+            
+            RandomColors(out color1, out color2, out color3, out color4);
+
+            Title = $"Mastermind: {color1}, {color2}, {color3}, {color4}";
 
 
 
         }
 
-        public string RandomColors()
+        public void RandomColors(out string color1, out string color2, out string color3, out string color4)
         {
             Random newColor = new Random();
+            List<string> colorList = new List<string>();
             string randomColor;
-            StringBuilder colorCode = new StringBuilder();
-
-
 
             for (int i = 1; i <= 4; i++)
             {
@@ -59,112 +63,164 @@ namespace MastermindCSProject
                         break;
                 }
 
-                colorCode.Append($"{randomColor}, ");
-
+                colorList.Add(randomColor);
             }
 
-            string colors = colorCode.ToString();
-            return colors;
+            color1 = colorList[0];
+            color2 = colorList[1];
+            color3 = colorList[2];
+            color4 = colorList[3];
 
         }
 
-        private void color1ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void colorComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            switch (color1ComboBox.SelectedIndex)
+            if (sender == color1ComboBox)
             {
-                case 0:
-                    color1Label.Background = Brushes.White;
-                    break;
-                case 1:
-                    color1Label.Background = Brushes.Red;
-                    break;
-                case 2:
-                    color1Label.Background = Brushes.Blue;
-                    break;
-                case 3:
-                    color1Label.Background = Brushes.Green;
-                    break;
-                case 4:
-                    color1Label.Background = Brushes.Orange;
-                    break;
-                case 5:
-                    color1Label.Background = Brushes.Yellow;
-                    break;
+                switch (color1ComboBox.SelectedIndex)
+                {
+                    case 0:
+                        color1Label.Background = Brushes.White;
+                        break;
+                    case 1:
+                        color1Label.Background = Brushes.Red;
+                        break;
+                    case 2:
+                        color1Label.Background = Brushes.Blue;
+                        break;
+                    case 3:
+                        color1Label.Background = Brushes.Green;
+                        break;
+                    case 4:
+                        color1Label.Background = Brushes.Orange;
+                        break;
+                    case 5:
+                        color1Label.Background = Brushes.Yellow;
+                        break;
+                }
+            }
+
+            else if (sender == color2ComboBox)
+            {
+                switch (color2ComboBox.SelectedIndex)
+                {
+                    case 0:
+                        color2Label.Background = Brushes.White;
+                        break;
+                    case 1:
+                        color2Label.Background = Brushes.Red;
+                        break;
+                    case 2:
+                        color2Label.Background = Brushes.Blue;
+                        break;
+                    case 3:
+                        color2Label.Background = Brushes.Green;
+                        break;
+                    case 4:
+                        color2Label.Background = Brushes.Orange;
+                        break;
+                    case 5:
+                        color2Label.Background = Brushes.Yellow;
+                        break;
+                }
+            }
+
+            else if (sender == color3ComboBox)
+            {
+                switch (color3ComboBox.SelectedIndex)
+                {
+                    case 0:
+                        color3Label.Background = Brushes.White;
+                        break;
+                    case 1:
+                        color3Label.Background = Brushes.Red;
+                        break;
+                    case 2:
+                        color3Label.Background = Brushes.Blue;
+                        break;
+                    case 3:
+                        color3Label.Background = Brushes.Green;
+                        break;
+                    case 4:
+                        color3Label.Background = Brushes.Orange;
+                        break;
+                    case 5:
+                        color3Label.Background = Brushes.Yellow;
+                        break;
+                }
+            }
+
+            else if (sender == color4ComboBox)
+            {
+                switch (color4ComboBox.SelectedIndex)
+                {
+                    case 0:
+                        color4Label.Background = Brushes.White;
+                        break;
+                    case 1:
+                        color4Label.Background = Brushes.Red;
+                        break;
+                    case 2:
+                        color4Label.Background = Brushes.Blue;
+                        break;
+                    case 3:
+                        color4Label.Background = Brushes.Green;
+                        break;
+                    case 4:
+                        color4Label.Background = Brushes.Orange;
+                        break;
+                    case 5:
+                        color4Label.Background = Brushes.Yellow;
+                        break;
+                }
             }
         }
 
-        private void color2ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void checkCodeButton_Click(object sender, RoutedEventArgs e)
         {
-            switch (color2ComboBox.SelectedIndex)
-            {
-                case 0:
-                    color2Label.Background = Brushes.White;
-                    break;
-                case 1:
-                    color2Label.Background = Brushes.Red;
-                    break;
-                case 2:
-                    color2Label.Background = Brushes.Blue;
-                    break;
-                case 3:
-                    color2Label.Background = Brushes.Green;
-                    break;
-                case 4:
-                    color2Label.Background = Brushes.Orange;
-                    break;
-                case 5:
-                    color2Label.Background = Brushes.Yellow;
-                    break;
-            }
-        }
 
-        private void color3ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            switch (color3ComboBox.SelectedIndex)
-            {
-                case 0:
-                    color3Label.Background = Brushes.White;
-                    break;
-                case 1:
-                    color3Label.Background = Brushes.Red;
-                    break;
-                case 2:
-                    color3Label.Background = Brushes.Blue;
-                    break;
-                case 3:
-                    color3Label.Background = Brushes.Green;
-                    break;
-                case 4:
-                    color3Label.Background = Brushes.Orange;
-                    break;
-                case 5:
-                    color3Label.Background = Brushes.Yellow;
-                    break;
-            }
-        }
 
-        private void color4ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            switch (color4ComboBox.SelectedIndex)
+            string chosenColor1, chosenColor2, chosenColor3, chosenColor4;
+            chosenColor1 = color1ComboBox.Text;
+            chosenColor2 = color2ComboBox.Text;
+            chosenColor3 = color3ComboBox.Text;
+            chosenColor4 = color4ComboBox.Text;
+
+            List<string> generatedColors = new List<string> {color1, color2, color3, color4};
+            List<string> chosenColors = new List<string> {chosenColor1, chosenColor2, chosenColor3, chosenColor4};
+
+            for (int i = 0; i < 4; i++) 
             {
-                case 0:
-                    color4Label.Background = Brushes.White;
-                    break;
-                case 1:
-                    color4Label.Background = Brushes.Red;
-                    break;
-                case 2:
-                    color4Label.Background = Brushes.Blue;
-                    break;
-                case 3:
-                    color4Label.Background = Brushes.Green;
-                    break;
-                case 4:
-                    color4Label.Background = Brushes.Orange;
-                    break;
-                case 5:
-                    color4Label.Background = Brushes.Yellow;
-                    break;
+                Label targetLabel= null;
+
+                switch (i)
+                {
+                    case 0: targetLabel = color1Label;
+                        break;
+                    case 1: targetLabel = color2Label;
+                        break;
+                    case 2: targetLabel = color3Label;
+                        break;
+                    case 3: targetLabel = color4Label;
+                        break;
+                }
+
+                if (chosenColors[i] == generatedColors[i])
+                {
+                    targetLabel.BorderBrush = Brushes.Green;
+                    targetLabel.BorderThickness = new Thickness(5);
+                }
+                else if (generatedColors.Contains(chosenColors[i]))
+                {
+                    targetLabel.BorderBrush = Brushes.Beige;
+                    targetLabel.BorderThickness = new Thickness(5);
+                }
+                else
+                {
+                    targetLabel.BorderBrush = Brushes.Red;
+                    targetLabel.BorderThickness = new Thickness(5);
+                }
+
             }
         }
     }
